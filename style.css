@@ -6,21 +6,17 @@
     font-family: 'HalyardDis_ISIAU Bk';
     font-size: 20px;
 }
-h1{background-color: aliceblue;
-    color: rgb(10, 81, 81);
+h1{color: rgb(10, 81, 81);
     font-size: 15px;
     /* color: rgba(50,50,75,0.6) IL QUARTO VALORE È PER LA TRASPARENZA CHE VA DA 0 A 1 */
 }
 h3{font-style: italic; 
 }
-a{color: rgb(119, 15, 15);
-    text-decoration: underline;
+
+a{ /*bordo del testo, scritto in shorthand (più righe di codice relative alla stessa cosa riassunte in una)*/
+    border bottom: 1px solid black;
 }
+/* "a" sta per link */
 a:hover{
-    color: rgb(146, 4, 4);
-    text-decoration:line-through;
-}
-a:visited{
-    font-weight: 700;
-    text-decoration: overline;
+    text-decoration:underline;
 }
