@@ -5,6 +5,7 @@
     /* font-family: 'Roboto', sans-serif;*/
     font-family: 'HalyardDis_ISIAU Bk', Arial, sans-serif; /*Arial qui è il carattere di riserva (se Halyard dovesse saltare, non viene letto ecc, in automatico passa all'Aliard)*/
     font-size: 20px;
+    display:flex;
 }
 h1{color: rgb(10, 81, 81);
     font-size: 15px;
