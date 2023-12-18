@@ -16,6 +16,7 @@ h3{font-style: italic;
 
 a{ /*bordo del testo, scritto in shorthand (più righe di codice relative alla stessa cosa riassunte in una)*/
     border bottom: 1px solid black;
+    text-decoretion: none;
 }/* "a" sta per link */
 
 a:hover{
