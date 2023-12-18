@@ -3,20 +3,27 @@
     background-color: rgb(231, 231, 231);
     color: rgb(22, 9, 34);
     /* font-family: 'Roboto', sans-serif;*/
-    font-family: 'HalyardDis_ISIAU Bk';
+    font-family: 'HalyardDis_ISIAU Bk', Arial, sans-serif; /*Arial qui è il carattere di riserva (se Halyard dovesse saltare, non viene letto ecc, in automatico passa all'Aliard)*/
     font-size: 20px;
 }
 h1{color: rgb(10, 81, 81);
     font-size: 15px;
     /* color: rgba(50,50,75,0.6) IL QUARTO VALORE È PER LA TRASPARENZA CHE VA DA 0 A 1 */
 }
+
 h3{font-style: italic; 
 }
 
 a{ /*bordo del testo, scritto in shorthand (più righe di codice relative alla stessa cosa riassunte in una)*/
     border bottom: 1px solid black;
-}
-/* "a" sta per link */
+}/* "a" sta per link */
+
 a:hover{
+    color: black;
     text-decoration:underline;
+}
+
+a:visited{
+    color: blueviolet;
+    text-decoration: line-through;
 }
