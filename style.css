@@ -1,22 +1,47 @@
  /* body qui è un selesttore */
  body {
-    background-color: rgb(231, 231, 231);
-    color: rgb(22, 9, 34);
+    background-color: rgb(250, 250, 250); /*sul web non bisognerebbe mai usare il bianco e il nero puri, perchè rende difficoltosa la lettura*/
+    color: rgb(0, 13, 50);
     /* font-family: 'Roboto', sans-serif;*/
     font-family: 'HalyardDis_ISIAU Bk', Arial, sans-serif; /*Arial qui è il carattere di riserva (se Halyard dovesse saltare, non viene letto ecc, in automatico passa all'Aliard)*/
-    font-size: 20px;
-    display:flex;
-}
-h1{color: rgb(10, 81, 81);
-    font-size: 15px;
-    /* color: rgba(50,50,75,0.6) IL QUARTO VALORE È PER LA TRASPARENZA CHE VA DA 0 A 1 */
+    font-size: 16px; /* 16px è per convenzione, in questo documento ora corrisponde a 1em. 
+                        Sugli schermi il numero di caratteri per linea di testo deve essere compresa tra i 45 e 75*/
+    line-height: 1.2; /*onterlinea*/
+    display:flex; /*flexbox è per dividere i <div> (tutti gli elementi principali / gli immediati figli del body) di HTML in colonne, elementi distinti e affiancati */
+    margin: 0;
+    padding: 0; /*questo è per togliere il margine esterno e l'imbottitutra interna naturale del browser*/
+    height: 100vh; /*viewport height (il body è alto quanto la finestra, non scrolla)*/
+    overflow-y: hidden; /*nasconde ciò che non è nel vieport (=canva)*/
 }
 
-h3{font-style: italic; 
+
+h1{
+    font-size: 1.3em;
+    /* color: rgba(50,50,75,0.6) IL QUARTO VALORE È PER LA TRASPARENZA CHE VA DA 0 A 1 */
+    font-weight: normal;
+}
+
+h3{
+    margin: 0;
+    font-size: 1.3em; /*1.3 è un numero in proporzione ai 16px di base stabiliti nel body*/
+    font-weight: normal;
+    position: fixed; /*no scroll*/ 
+    background-color: rgb(250, 250, 250);
+    width: calc(20% - 10px);
+
+}
+
+h4{
+    font-size: 1.18em;
+    font-weight: normal;
+}
+
+h5{
+    font-size: 1em;
 }
 
 a{ /*bordo del testo, scritto in shorthand (più righe di codice relative alla stessa cosa riassunte in una)*/
-    border bottom: 1px solid black;
+    border-bottom: 1px solid black;
     text-decoretion: none;
 }/* "a" sta per link */
 
@@ -28,4 +53,38 @@ a:hover{
 a:visited{
     color: blueviolet;
     text-decoration: line-through;
+}
+
+div{
+    width: 20%; /*per dare agli elementi una larghezza in % al loro diretto contenitore*/
+    padding: 0px 5px; /* (top, right, bottom, left) (top-bottom, right-left) (tutto)*/
+    overflow-y:scroll; /*per far scrollare le colonne*/
+}
+
+div::-webkit-scrollbar { /*per nascondere la barra di scroll*/
+    display: none;
+}
+
+div.news, div.calendario, div.showcase, div.ricercaesviluppo{
+    border-right: 1px solid black;
+}
+
+div.separatore{
+    margin-top: 50px;
+}
+
+img{
+    width: 100%;
+}
+
+div.calendario time{
+    font-size: 1.18em;
+}
+
+/*MEDIA QUERY si riferisce a tutti gli schermi portate larghi da 0 a 420 px*/
+@media screen and (max-width: 420px){
+    body{
+        background-color: violet;
+        width: calc(100vw * 5); /*fa risultare il viewport largo quanto 5 colonne e non quanto lo schermo*/
+    }
 }
